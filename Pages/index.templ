@@ -1,0 +1,31 @@
+package pages
+
+templ Index(){
+    <!DOCTYPE html>
+    <head>
+        <title>Photo Uploader</title>
+        <script src="https://unpkg.com/htmx.org@2.0.3" integrity="sha384-0895/pl2MU10Hqc6jd4RvrthNlDiE9U1tWmX7WRESftEDRosgxNsQG/Ze9YMRzHq" crossorigin="anonymous"></script>
+        <script src="https://cdn.tailwindcss.com"></script>
+    </head>
+    <body>
+        <div id="nav" class="flex justify-center space-x-4">
+            <button hx-post="/local"
+                hx-trigger="click"
+                hx-target="#content">
+                Local 
+            </button>
+            <button hx-post="/download"
+                hx-trigger="click"
+                hx-target="#content">
+                Download 
+            </button>
+            <button hx-post="/upload"
+                hx-trigger="click"
+                hx-target="#content">
+                Upload 
+            </button>
+        </div>
+        <div id="content"></div>
+    </body>
+}
+
